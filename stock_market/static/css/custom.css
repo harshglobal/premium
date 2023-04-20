@@ -1,0 +1,19 @@
+/* .show-notification{
+    position: fixed;
+    bottom: 100%;
+    right:20px;
+    animation-name: show-toast;
+    animation-duration:6s;
+    z-index: 99;
+} */
+
+.prce142 {
+font-size: 15px;
+}
+
+.course-link {
+    color: #fff;
+    border: 1px solid #fff;
+    font-family: 'Roboto', sans-serif;
+  
+}

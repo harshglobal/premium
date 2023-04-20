@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, shrink-to-fit=9">
+		<meta name="description" content="Gambolthemes">
+		<meta name="author" content="Gambolthemes">
+		<title>Edututs+ - Sign In</title>
+
+        {% include 'includes/css.html' %}
+	</head>
+	<body>
+		<div class="sign_in_up_bg">
+			<div class="container">
+				<div class="row justify-content-lg-center justify-content-md-center">
+					<div class="col-lg-12">
+						<div class="main_logo25" id="logo">
+							<a href="index.html"><img src="{% static 'images/logo.svg' %}" alt></a>
+							<a href="index.html"><img class="logo-inverse" src="{% static 'images/ct_logo.svg' %}" alt></a>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-8">
+						
+						<div class="sign_form">
+							<h2>Welcome Back</h2>
+							<p>Log In to Your Edututs+ Account!</p>
+
+							<p>{% include 'includes/alerts.html' %}</p>
+
+							<button class="social_lnk_btn color_btn_fb"><i class="uil uil-facebook-f"></i>Continue with Facebook</button>
+							<button class="social_lnk_btn mt-15 color_btn_tw"><i class="uil uil-twitter"></i>Continue with Twitter</button>
+							<button class="social_lnk_btn mt-15 color_btn_go"><i class="uil uil-google"></i>Continue with Google</button>
+							<form method='post' action= "{% url 'login' %}" enctype="multipart/form-data">
+								{% csrf_token %}
+								<div class="ui search focus mt-15">
+									<div class="ui left icon input swdh95">
+										<input class="prompt srch_explore" type="email" name="emailaddress" value id="id_email" required maxlength="64" placeholder="Email Address">
+										<i class="uil uil-envelope icon icon2"></i>
+									</div>
+								</div>
+								<div class="ui search focus mt-15">
+									<div class="ui left icon input swdh95">
+										<input class="prompt srch_explore" type="password" name="password" value id="id_password" required maxlength="64" placeholder="Password">
+										<i class="uil uil-key-skeleton-alt icon icon2"></i>
+									</div>
+								</div>
+								<div class="ui form mt-30 checkbox_sign">
+									<div class="inline field">
+										<div class="ui checkbox mncheck">
+											<input type="checkbox" tabindex="0" class="hidden" id= "rememberMe">
+											<label>Remember Me</label>
+										</div>
+									</div>
+								</div>
+								<button class="login-btn" type="submit">Sign In</button>
+							</form>
+							<p class="sgntrm145">Or <a href="{% url 'forgot_password' %}">Forgot Password</a>.</p>
+							<p class="mb-0 mt-30">Don't have an account? <a href="{% url 'signup' %}">Sign Up</a></p>
+						</div>
+						
+
+						<div class="sign_footer"><img src="{% static 'images/sign_logo.png' %}" alt>© 2020 <strong>Edututs+</strong>. All Rights Reserved.</div>
+					</div>
+				</div>
+			</div>
+		</div>
+        {% include 'includes/javascript.html' %}
+		<script src="{% static 'js/my_custom.js' %}"></script>
+
+
+	</body>
+</html>

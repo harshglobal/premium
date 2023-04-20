@@ -1,0 +1,46 @@
+{% load static %}
+{% for course in courses %}
+<div class="col-lg-3 col-md-4">
+    <div class="fcrse_1 mt-30">
+        <a href="{% url 'course_detail' course.name_slug %}" class="fcrse_img">
+            <img src="{{course.course_image.url}}" alt>
+            <div class="course-overlay">
+                {% comment %} <div class="badge_seller">Bestseller</div>
+                <div class="crse_reviews">
+                    <i class="uil uil-star"></i>4.5
+                </div>
+                <span class="play_btn1"><i class="uil uil-play"></i></span> {% endcomment %}
+                <div class="crse_timer">
+                    {{course.duration}}
+                </div>
+            </div>
+        </a>
+        <div class="fcrse_content">
+            <div class="eps_dots more_dropdown">
+                <a href="{% url 'home' %}"><i class="uil uil-ellipsis-v"></i></a>
+                <div class="dropdown-content">
+                    <span><i class="uil uil-share-alt"></i>Share</span>
+                    <span><i class="uil uil-clock-three"></i>Watch Later</span>
+                    <span><i class="uil uil-ban"></i>Not Interested</span>
+                    <span><i class="uil uil-windsock"></i>Report</span>
+                </div>
+            </div>
+            <div class="vdtodt">
+                <span class="vdt14">109k views</span>
+                <span class="vdt14">15 days ago</span>
+            </div>
+            <a href="{% url 'course_detail' course.name_slug %}" class="crse14s">{{course.name}}</a>
+            <a href="explore.html#" class="crse-cate">{{course.category}} </a>
+            <div class="auth1lnkprce ">
+                <p class="cr1fot">By <a href="explore.html#"></a>{{course.author}}</p>
+                <div class="prce142 text-danger" ><del>₹ {{course.price}}</del></div>
+            </div>
+            <div class="prce142 text-danger">
+                <b>₹ {{course.discounted_price}}</b></div>
+            <div>
+                <a class="btn btn-outline-danger mt-3" href="{% url 'course_detail' course.name_slug %}">View</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}

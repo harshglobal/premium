@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, shrink-to-fit=9">
+		<meta name="description" content="Gambolthemes">
+		<meta name="author" content="Gambolthemes">
+		<title>Edututs+ - Explore</title>
+
+		<!-- all css  -->
+		{% include "includes/css.html" %}
+
+	</head>
+	<body>
+		<!-- Navbar / Header -->
+		{% include "layout/navbar.html" %}
+
+		<!-- Sidebar -->
+		{% comment %} {% include "layout/sidebar.html" %} {% endcomment %}
+
+
+			{% block content  %}
+			<!-- content will go  here-->
+			{% endblock content %}
+
+			{% include "layout/footer.html" %}
+
+		</div>
+
+		{% include "includes/javascript.html" %}
+		
+	</body>
+</html>
+

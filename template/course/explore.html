@@ -1,0 +1,40 @@
+﻿{% extends 'base.html' %}
+{% load static %}
+
+
+		{% block content %}
+		<!-- it includes 3 component  serach bar bottom, livestream and products-->
+		<div class="wrapper wrapper__minify">
+			<div class="sa4d25">
+				<div class="container-fluid">
+					<div class="row"> 
+						<!-- bottom search bar -->
+						{% include "components/search_bar_bottom.html" %}
+						<!-- Live Stream -->
+						{% include "components/live_streams.html" %}
+
+						<!-- products -->
+						
+				<div class="col-md-12">
+					<div class="_14d25">
+						<div class="row">
+	
+						{% include "components/product.html" %}
+				
+						{% include 'components/spinner.html' %}
+						</div>
+					</div>
+				</div>
+
+				<!-- products ends  -->
+
+
+
+					</div>
+				</div>
+			</div>
+		<!-- </div> last is after footer -->
+
+		{% endblock content %}
+
+		

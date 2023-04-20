@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, shrink-to-fit=9">
+		<meta name="description" content="Gambolthemes">
+		<meta name="author" content="Gambolthemes">
+		<title>Edututs+ - Sign Up</title>
+        {% include 'includes/css.html' %}
+
+	</head>
+	<body>
+		<div class="sign_in_up_bg">
+			<div class="container">
+				<div class="row justify-content-lg-center justify-content-md-center">
+					<div class="col-lg-12">
+						<div class="main_logo25" id="logo">
+							<a href="index.html"><img src="{% static 'images/logo.svg' %}" alt></a>
+							<a href="index.html"><img class="logo-inverse" src="{% static 'images/ct_logo.svg' %}" alt></a>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-8">
+						<div class="sign_form">
+							<h2>Welcome to Edututs+</h2>
+							<p>Sign Up and Start Learning!</p>
+							<form method="post" action= "{% url 'signup' %}"  enctype="multipart/form-data">
+                                {% csrf_token %}
+								<div class="ui search focus">
+									<div class="ui left icon input swdh11 swdh19">
+										<input class="prompt srch_explore" type="text" name="first_name" value id="id_first_name" required maxlength="64" placeholder="First Name">
+									</div>
+								</div>
+                                <div class="ui search focus mt-15">
+									<div class="ui left icon input swdh11 swdh19">
+										<input class="prompt srch_explore" type="text" name="last_name" value id="id_last_name" required maxlength="64" placeholder="Last Name">
+									</div>
+								</div>
+								<div class="ui search focus mt-15">
+									<div class="ui left icon input swdh11 swdh19">
+										<input class="prompt srch_explore" type="email" name="email" id="id_email" required maxlength="64" placeholder="Email Address">
+									</div>
+								</div>
+                                <div class="ui search focus mt-15">
+									<div class="ui left icon input swdh11 swdh19">
+										<input class="prompt srch_explore" type="text" name="username" value id="id_username" required maxlength="64" placeholder="Username">
+									</div>
+								</div>
+								<div class="ui search focus mt-15">``
+									<div class="ui left icon input swdh11 swdh19">
+										<input class="prompt srch_explore" type="password" name="password" value id="id_password" required maxlength="64" placeholder="Password">
+									</div>
+								</div>
+                                <div class="ui search focus mt-15">
+									<div class="ui left icon input swdh11 swdh19">
+										<input class="prompt srch_explore" type="password" name="confirm_password" value id="id_confirm_password" required maxlength="64" placeholder="Confirm Password">
+									</div>
+								</div>
+								<div class="ui form mt-30 checkbox_sign">
+									<div class="inline field">
+										<div class="ui checkbox mncheck">
+											<input type="checkbox" tabindex="0" class="hidden">
+											<label>I’m in for emails with exciting discounts and personalized recommendations</label>
+										</div>
+									</div>
+								</div>
+								<button class="login-btn" type="submit">Next</button>
+							</form>
+							<p class="sgntrm145">By signing up, you agree to our <a href="terms_of_use.html">Terms of Use</a> and <a href="terms_of_use.html">Privacy Policy</a>.</p>
+							<p class="mb-0 mt-30">Already have an account? <a href="{% url 'login' %}">Log In</a></p>
+						</div>
+						<div class="sign_footer"><img src="{% static 'images/sign_logo.png' %}" alt>© 2020 <strong>Edututs+</strong>. All Rights Reserved.</div>
+					</div>
+                    {% include 'includes/alerts.html' %}
+
+				</div>
+			</div>
+		</div>
+        {% include 'includes/javascript.html' %}
+
+	</body>
+</html>

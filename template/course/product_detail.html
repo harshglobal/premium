@@ -1,0 +1,152 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+
+<div class=" wrapper wrapper__minify _bg4586"> 
+    <div class="_215b01">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section3125">
+                        <div class="row">
+                            <div class="col-xl-4 col-lg-5 col-md-6">
+                                <div class="preview_video">
+                                    <a href="course_detail_view.html#" class="fcrse_img" data-toggle="modal" data-target="#videoModal">
+                                        <img src="{{course.course_image.url}}" alt="">
+                                        <div class="course-overlay">
+                                            <div class="badge_seller">Bestseller</div>
+                                            <span class="play_btn1"><i class="uil uil-play"></i></span>
+                                            {% comment %} <span class="_215b02">Preview this course</span> {% endcomment %}
+                                        </div>
+                                    </a>
+                                </div>
+                                
+                            </div>
+                            <div class="col-xl-8 col-lg-7 col-md-6">
+                                <div class="_215b03">
+                                    <h2>{{course.name}}</h2>
+                                    <span class="_215b04">{{course.short_desc}}</span>
+                                </div>
+                                
+                                
+                                <div class="_215b06">
+                                    <div class="_215b07">
+                                        <span><i class="uil uil-comment"></i></span>
+                                        English
+                                    </div>
+                                    <div class="_215b07">
+                                        <span><i class="uil uil-inr"></i></span>
+
+                                        <del>₹ {{course.price}}</del>
+                                        <span><i class="uil uil-inr"></i></span>
+
+                                        <b>₹ {{course.discounted_price}}</b>
+
+                                    </div>
+  
+                                </div>
+                                
+                                <ul class="_215b31">
+                                    <li><button class="btn_adcart">Add to Cart</button></li>
+                                    <li><button class="btn_buy">Buy Now</button></li>
+                                </ul>
+                                <ul class="_215b31">
+                                    {% comment %} <li><a class="btn btn-outline-danger course-link"href="{{course.original_link}}">Original Course Link for Price Comparison and Course Content</a></li> {% endcomment %}
+                                </ul>
+ 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="_215b15 _byt1458">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="user_dt5">
+                        <div class="user_dt_left">
+                            <div class="live_user_dt">
+
+                                <div class="user_cntnt">
+                                    <a href="course_detail_view.html#" class="_df7852">{{course.author_name}}</a>
+                                    <div class="user_img5 pl-4">
+                                        <a href="course_detail_view.html#"><img src="{{course.author_image.url}}" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user_dt_right">
+                            <ul>
+                                <li>
+                                    <a href="course_detail_view.html#" class="lkcm152"><i class="uil uil-eye"></i><span>1452</span></a>
+                                </li>
+                                <li>
+                                    <a href="course_detail_view.html#" class="lkcm152"><i class="uil uil-thumbs-up"></i><span>100</span></a>
+                                </li>
+                                <li>
+                                    <a href="course_detail_view.html#" class="lkcm152"><i class="uil uil-thumbs-down"></i><span>20</span></a>
+                                </li>
+                                <li>
+                                    <a href="course_detail_view.html#" class="lkcm152"><i class="uil uil-share-alt"></i><span>9</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="course_tabs">
+
+                        <nav>
+                            <div class="nav nav-tabs tab_crse justify-content-center" id="nav-tab" role="tablist">
+                                <a class="nav-item nav-link active" id="nav-about-tab" data-toggle="tab" href="course_detail_view.html#nav-about" role="tab" aria-selected="true">Delivery Policy</a>
+                                <a class="nav-item nav-link" id="nav-courses-tab" data-toggle="tab" href="course_detail_view.html#nav-courses" role="tab" aria-selected="false">Sample Video</a>
+                            </div>
+                            
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="_215b17">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="course_tab_content">
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-about" role="tabpanel">
+                                <div class="_htg451">
+                                    <div class="_htg452"    >
+                                        <h3>Delivery  Policy</h3>
+                                        <p>
+                                            All products available for purchase on w are digital products and delivered via digital download only. 
+
+                                            Your file(s) will be available for download within <b>24 hours</b> after payment confirmation. Download link(s) for course(s) purchased will  be emailed to the email address customer used in the checkout process. Please note, kindly recheck the mail-id provided at the time of checkout or sign up process.
+                                            Download link(s) will expire after 7 days from the date of download link(s) received by customer.For more details drop the query on <a href = "mailto: support@example.com"><b>support@example.com</b></a> .We will answer you as early as possible
+                                            
+
+                                        </p>
+                                        <h3>Sample Video</h3>
+                                        <p>
+                                            If you want to see sample video of the course, You can drop mail on 
+                             <a href = "mailto: support@example.com"><b>support@example.com</b></a> . You will get the sample video link. Please mention the name of course correctly at the time of sample video enquiry.
+
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- last closing div is after footer in footer section -->
+{% endblock content %}

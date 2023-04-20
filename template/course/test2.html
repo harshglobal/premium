@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, shrink-to-fit=9">
+		<meta name="description" content="Gambolthemes">
+		<meta name="author" content="Gambolthemes">
+		<title>Edututs+ - Explore</title>
+		<link rel="icon" type="image/png" href="images/fav.png">
+
+		<!-- all css  -->
+		{% include "includes/css.html" %}
+
+	</head>
+	<body>
+		<!-- Navbar / Header -->
+		{% include "layout/navbar.html" %}
+
+		<!-- Sidebar -->
+		{% include "layout/sidebar.html" %}
+
+		<!-- it includes 3 component  serach bar bottom, livestream and products-->
+		<div class="wrapper">
+			<div class="sa4d25">
+				<div class="container-fluid">
+					<div class="row"> 
+						<!-- bottom search bar -->
+						{% include "components/search_bar_bottom.html" %}
+						<!-- Live Stream -->
+						{% include "components/live_streams.html" %}
+						<!-- products -->
+						{% include "components/product.html" %}
+
+					</div>
+				</div>
+			</div>
+
+			{% include "layout/footer.html" %}
+
+		</div>
+
+		{% include "includes/javascript.html" %}
+		
+	</body>
+</html>
+
